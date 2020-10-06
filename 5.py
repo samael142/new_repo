@@ -8,5 +8,7 @@ if proceeds > costs:
     print('Наша рентабельность {}%'.format(profit))
     staff = int(input('А сколько сотрудников? '))
     print('Каждый заработал {} денег'.format((proceeds - costs) / staff))
+elif proceeds == costs:
+    print('Вышли в 0, соответсвенно зарплаты не будет.')
 else:
     print('Отработали в минус, прибыли нет!!!')
