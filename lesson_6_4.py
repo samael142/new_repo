@@ -13,8 +13,7 @@ class Car:
         return 'Машина остановилась'
 
     def turn(self, direction):
-        self.direction = direction
-        return f'Машина повернула {self.direction}'
+        return f'Машина повернула {direction}'
 
     def show_speed(self):
         return self.speed
@@ -42,9 +41,11 @@ class WorkCar(Car):
         else:
             return self.speed
 
+
 class PoliceCar(Car):
     def __init__(self, speed, color, name):
         super().__init__(speed, color, name, is_police=True)
+
     def show_speed(self):
         return self.speed
 

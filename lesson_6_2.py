@@ -5,8 +5,7 @@ class Road:
         self._width = width
 
     def formula(self, asphalt_width):
-        self.asphalt_width = asphalt_width
-        return f'{(self._length * self._width * 25 * self.asphalt_width) // 1000} т'
+        return f'{(self._length * self._width * 25 * asphalt_width) // 1000} т'
 
 
 a = Road(5000, 20)
