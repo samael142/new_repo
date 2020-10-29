@@ -18,19 +18,13 @@ class Date:
 
     @staticmethod
     def validation(n):
-        if n[0] in range(1, 32):
-            if n[1] in range(1, 13):
-                if n[2] in range(1, 2021):
-                    return "Всё верно"
-                else:
-                    return "Неправильный год"
-            else:
-                return "Неправильный месяц"
+        if n[0] not in range(1, 32) or n[1] not in range(1, 13) or n[2] not in range(1, 2021):
+            return "Date is not valid"
         else:
-            return "Неправильный день"
+            return "Date is valid"
 
 
-b = Date('12-01-1979')
+b = Date('12-12-1979')
 print(b)
-c = Date("32 числа 12 месяца 2020 года нашей эры")
+c = Date("31 числа 2 месяца 2020 года нашей эры")
 print(c)
